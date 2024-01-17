@@ -1,4 +1,4 @@
-import { CreateUserRequest } from "../dtos/user/user";
+import { CreateUserRequest, User } from "../dtos/user/user";
 import UserRepository from "../repositories/user.repository";
 
 class UserService {
@@ -6,6 +6,10 @@ class UserService {
 
   createUser = async (data: CreateUserRequest) => {
     return this.userRepository.create(data);
+  };
+
+  fetchUsers = async (): Promise<User[]> => {
+    return this.userRepository.getAll();
   };
 }
 

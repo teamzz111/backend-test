@@ -15,11 +15,24 @@ class IndexController {
 
     try {
       await validateOrReject(user);
-      const result = await this.userService.createUser(user);
-      res.status(200).json({ id: result });
     } catch (e) {
-      console.log(e);
-      res.status(400).send();
+      return res.status(400).send();
+    }
+
+    try {
+      const result = await this.userService.createUser(user);
+      res.status(201).json({ id: result });
+    } catch (e) {
+      res.status(500).send();
+    }
+  };
+
+  public fetchUsers = async (req: Request, res: Response) => {
+    try {
+      const result = await this.userService.fetchUsers();
+      res.status(200).json(result);
+    } catch (e) {
+      res.status(500).send();
     }
   };
 

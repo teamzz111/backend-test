@@ -14,6 +14,7 @@ class IndexRoute implements Routes {
   private initializeRoutes() {
     this.router.get(`${this.path}`, this.indexController.index);
     this.router.post(`${this.path}createUser`, this.indexController.createUser);
+    this.router.get(`${this.path}getUsers`, this.indexController.fetchUsers);
   }
 }
 
