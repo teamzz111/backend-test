@@ -1,5 +1,6 @@
 import { CreateUserRequest, User } from "../dtos/user/user";
 import userModel from "../models/users.model";
+import { faker } from "@faker-js/faker";
 
 class UserRepository {
   userModel: typeof userModel;
@@ -10,7 +11,10 @@ class UserRepository {
 
   async create(data: CreateUserRequest): Promise<string | never> {
     try {
-      const result = await this.userModel.create(data);
+      const result = await this.userModel.create({
+        ...data,
+        img: faker.image.avatar(),
+      });
       return result._id;
     } catch (e) {
       console.error(e);

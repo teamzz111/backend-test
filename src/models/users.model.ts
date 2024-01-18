@@ -8,6 +8,9 @@ const userSchema: Schema = new Schema({
   description: {
     type: String,
   },
+  img: {
+    type: String,
+  },
 });
 
 const userModel = model<User & Document>("users", userSchema);
