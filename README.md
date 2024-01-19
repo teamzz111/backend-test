@@ -29,6 +29,7 @@ Cors: Protección para el usuario <br>
 
 # Variables de entorno
 
+```
 # PORT
 PORT = 2000
 
@@ -46,4 +47,4 @@ LOG_DIR = ../logs
 # CORS
 ORIGIN = *
 CREDENTIALS = false
-
+```
