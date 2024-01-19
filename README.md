@@ -27,3 +27,23 @@ Dotenv: Manejo de variables de entorno<br>
 Class validator: Validación entrada de datos<br>
 Cors: Protección para el usuario <br>
 
+# Variables de entorno
+
+# PORT
+PORT = 2000
+
+# DATABASE
+DB_HOST=mongodb+srv://teamzz111:teamzz111@cluster0.mgtqle6.mongodb.net/test?retryWrites=true&w=majority&wtimeoutMS=5000
+DB_PORT=27017
+
+# TOKEN
+SECRET_KEY = secretKey
+
+# LOG
+LOG_FORMAT = dev
+LOG_DIR = ../logs
+
+# CORS
+ORIGIN = *
+CREDENTIALS = false
+
