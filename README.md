@@ -14,6 +14,10 @@ Es importante recalcar que se usa class-validator para probar que los datos que 
 
 La aplicación fue desplegada con ayuda de DigitalOcean.
 
+Para correrlo en local, compilarlo y usar nodemon para correrlo. 
+
+tsc && nodemon dist/server.js
+
 # Librerías incluidas
 
 Faker:  Se encarga de generar imágenes aleatorias en el registro  
